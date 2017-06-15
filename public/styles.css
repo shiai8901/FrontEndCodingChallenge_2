@@ -1,3 +1,46 @@
-body {
+/* chat background-color: #EFF1F2
+	button background-color: #FF1940;
+	send color: #4A90E2;
+*/
 
+body {
+	font-family: "Helvetica Neue";
+	font-size: 16px;
+}
+
+p {
+	font-size: 14px;
+	color: #222;
+}
+
+input {
+	border-radius: 3px;
+}
+button {
+	border-radius: 3px;
+}
+
+#logIn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 50px
+}
+
+#logInInput {
+	padding: 10px 15px;
+	width: 268px;
+	margin: 10px;
+	border: 1px solid #999;
+}
+
+#logInButton {
+	color: #fff;
+	text-align: center;
+	padding: 10px 15px;
+	width: 300px;
+	margin: 10px;
+	border: 1px solid #FF1940;
+	background-color: #FF1940;
 }
