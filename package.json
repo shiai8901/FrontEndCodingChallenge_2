@@ -8,6 +8,10 @@
     "start": "serve ./public",
     "api-server": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiai8901/FrontEndCodingChallenge_2.git"
+  },
   "engines": {
     "node": ">=7.0.0"
   },
