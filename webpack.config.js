@@ -17,9 +17,9 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
-        include: /client/,
-        loaders: ["style-loader", "css-loader", "sass-loader"]
+        test: /\.css$/,
+        include: /public/,
+        loaders: ["style-loader", "css-loader"]
       }
     ]
   }
