@@ -29,10 +29,12 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "serve": "^3.1.0",
     "style-loader": "^0.18.2"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "webpack": "^2.6.1"
   }
 }
