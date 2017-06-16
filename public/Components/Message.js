@@ -14,7 +14,7 @@ export default class Message extends React.Component {
 		return (
 			<div className="right-container">
 				<Heading currentRoomUser={this.props.currentRoomUser} currentRoom={this.props.currentRoom}/>
-				<MessageContent />
+				<MessageContent currentRoomMessage={this.props.currentRoomMessage}/>
 				<ChatBox />
 			</div>
 			)
