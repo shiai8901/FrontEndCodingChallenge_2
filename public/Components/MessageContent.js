@@ -10,8 +10,10 @@ export default class MessageContent extends React.Component {
 	render() {
 		console.log('MessageContent props: ', this.props);
 		return (
-			<div className="container">
+			<div className="content">
+				<div className="container">
 				MessageContent
+				</div>
 			</div>
 			)
 	}
