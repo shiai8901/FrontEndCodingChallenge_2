@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from '../styles.css'
 import Heading from './Heading';
-import MessageContent from './MessageContent';
+import MessageContentList from './MessageContentList';
 import ChatBox from './ChatBox';
 
 export default class Message extends React.Component {
@@ -14,8 +14,8 @@ export default class Message extends React.Component {
 		return (
 			<div className="right-container">
 				<Heading currentRoomUser={this.props.currentRoomUser} currentRoom={this.props.currentRoom}/>
-				<MessageContent />
-				<ChatBox />
+				<MessageContentList currentRoomMessage={this.props.currentRoomMessage}/>
+				<ChatBox handleSubmitMessage={this.props.handleSubmitMessage}/>
 			</div>
 			)
 	}

@@ -10,7 +10,7 @@ export default class ListItem extends React.Component {
 	render() {
 		console.log('ListItem props: ', this.props);
 		return (
-			<div className="leftColListItem" onClick={() => this.props.handleChangeRoom(this.props.name)}>{this.props.name}
+			<div className="leftColListItem" onClick={() => this.props.handleChangeRoom(this.props.id)}>{this.props.name}
 			</div>
 			)
 	}

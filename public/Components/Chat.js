@@ -2,24 +2,47 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from '../styles.css'
 import LeftCol from './LeftCol';
-import Message from './Message';
+import RightCol from './RightCol';
 import axios from 'axios';
 
 export default class Chat extends React.Component {
 	constructor(props) {
 		super(props); 
 		this.state = {
-			currentRoom: ""
+			currentRoom: "",
+			currentRoomId: ""
 		}
 		this.handleChangeRoom = this.handleChangeRoom.bind(this);
+		this.handleSubmitMessage = this.handleSubmitMessage.bind(this);
+		this.updateMessages = this.updateMessages.bind(this);
 	}
 
-	handleChangeRoom(roomname) {
-		console.log(roomname);
-		this.setState({currentRoom: roomname});
-		axios.get('http://localhost:8080/api/rooms/0')
+	handleChangeRoom(id) {
+		axios.get('http://localhost:8080/api/rooms/' + id)
 			.then(res => {
-				this.setState({currentRoomUser: res.data.users});
+				this.setState({currentRoomUser: res.data.users, 
+								currentRoom: res.data.name, 
+								currentRoomId: id});
+			})
+			.then(() => this.updateMessages(id))
+			.catch(err => console.log(err.message));
+	}
+
+	handleSubmitMessage(e) {
+		e.preventDefault();
+		let data = {};
+		data.name = this.props.username;
+		data.message = e.target.message.value;
+		console.log('submit message ---> ', this.state.currentRoomId, this.props.username, ": ", e.target.message.value);
+		axios.post("http://localhost:8080/api/rooms/" + this.state.currentRoomId + "/messages", data)
+			.then(() => this.updateMessages(this.state.currentRoomId))
+			.catch(err => console.log(err.message));
+	}
+
+	updateMessages(id) {
+		axios.get("http://localhost:8080/api/rooms/" + id + "/messages")
+			.then(res => {
+				this.setState({currentRoomMessage: res.data})
 			})
 			.catch(err => console.log(err.message));
 	}
@@ -28,8 +51,15 @@ export default class Chat extends React.Component {
 		console.log('props in Chat', this.props);
 		return (
 			<div>
-				<LeftCol handleChangeRoom={this.handleChangeRoom} username={this.props.username} rooms={this.props.rooms} onlineSince={this.props.onlineSince}/>
-				<Message currentRoomUser={this.state.currentRoomUser} currentRoom={this.state.currentRoom} className="content" />
+				<LeftCol handleChangeRoom={this.handleChangeRoom} 
+						username={this.props.username} 
+						rooms={this.props.rooms} 
+						onlineSince={this.props.onlineSince}/>
+				<RightCol currentRoomUser={this.state.currentRoomUser} 
+						currentRoom={this.state.currentRoom} 
+						currentRoomMessage={this.state.currentRoomMessage}
+						handleSubmitMessage={this.handleSubmitMessage}
+						className="content" />
 			</div>
 			)
 	}

@@ -28,7 +28,6 @@ const database = [
   { name: 'Coffee Chats', id: 1, users: ['Abdul'], messages: [{name: 'Abdul', message: 'ayy'}]}
 ]
 
-
 // Utility functions
 const findRoom = (roomId) => {
   const room = database.find((room) => {

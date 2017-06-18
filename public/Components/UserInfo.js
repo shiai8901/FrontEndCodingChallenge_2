@@ -14,7 +14,7 @@ export default class UserInfo extends React.Component {
 	componentDidMount() {
 		this.setState({startTime: (new Date()).getTime(), onlineDuration: 0});
 		var timer;
-		setInterval(this.updateOnlineDuration, 10000);
+		setInterval(this.updateOnlineDuration, 60000);
 	}
 
 	updateOnlineDuration() {

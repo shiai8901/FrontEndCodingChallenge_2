@@ -12,12 +12,13 @@ export default class RoomList extends React.Component {
 		const listItems = this.props.rooms.map((room) => 
 			<ListItem handleChangeRoom={this.props.handleChangeRoom} 
 						key={room.id}
+						id={room.id}
 						name={room.name} />
 		);
 
 		return (
 			<div className="leftColList">
-					{listItems}
+				{listItems}
 			</div>
 			)
 	}

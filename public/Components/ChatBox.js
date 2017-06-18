@@ -13,6 +13,10 @@ export default class ChatBox extends React.Component {
 			<div className="chatbox">
 				<div className="container">
 				ChatBox
+				<form onSubmit={this.props.handleSubmitMessage}>
+					<input type="text" name="message" placeholder="Type a message..."/>
+					<input type="submit" value="Send" />
+				</form>
 				</div>
 			</div>
 			)
