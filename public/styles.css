@@ -94,6 +94,20 @@ ul {
 	height: 100vh;
 	background-color: #EFF1F2;
 }
+
+.other_user {
+
+}
+
+.incoming_message {
+	background-color: #fff;
+	padding: 10px 20px;
+	border-radius: 20px;
+	border: 1px solid #fff;
+	min-width: 50%;
+	max-width: 400px;
+}
+
 .heading {
 	height: 100px;	
 	box-shadow: 0 2px 0 #f1f1f1;
