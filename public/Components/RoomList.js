@@ -18,7 +18,7 @@ export default class RoomList extends React.Component {
 
 		return (
 			<div className="leftColList">
-					{listItems}
+				{listItems}
 			</div>
 			)
 	}
