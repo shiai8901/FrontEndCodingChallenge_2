@@ -116,8 +116,20 @@ ul {
 	border: 1px solid #fff;
 	min-width: 50%;
 	max-width: 400px;
+	clear: both;
 }
 
+.outgoing_message {
+	background-color: #FF1940;
+	padding: 10px 20px;
+	border-radius: 20px;
+	border: 1px solid #FF1940;
+	min-width: 50%;
+	max-width: 400px;
+	float: right;
+	clear: both;
+	color: #fff;
+}
 .heading {
 	height: 100px;	
 	box-shadow: 0 2px 0 #f1f1f1;
@@ -136,7 +148,7 @@ ul {
 }
 .chatbox {
 	bottom: 0;
-	height: 80px;
+	min-height: 80px;
 	right: 0;
 	left: 240px;
 	position: fixed;
@@ -146,11 +158,12 @@ ul {
 #messagebox {
 	width: 100%;
 }
-#messagebox input[type=text]{
+#messagebox textarea[type=text]{
 	border: solid 1px #EFF1F2;
 	padding: 10px;
 	width: calc(100% - 140px);
 	font-size: 16px;
+	resize: none;
 }
 #messagebox input[type=submit] {
 	border: none;
