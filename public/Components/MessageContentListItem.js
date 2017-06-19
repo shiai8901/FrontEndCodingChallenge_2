@@ -9,11 +9,19 @@ export default class MessageContentListItem extends React.Component {
 
 	render() {
 		console.log('MessageContentListItem props: ', this.props);
-		return (
-			<div className="MessageContentListItem">
-				<p className="other_user">{this.props.name}</p>
-				<p className="incoming_message">{this.props.message}</p>
-			</div>
-			)
+		if (this.props.username === this.props.name) {
+			return (
+				<div className="MessageContentListItem">
+					<p className="outgoing_message">{this.props.message}</p>
+				</div>
+				)
+		} else {
+			return (
+				<div className="MessageContentListItem">
+					<p className="other_user">{this.props.name}</p>
+					<p className="incoming_message">{this.props.message}</p>
+				</div>
+				)			
+		}
 	}
 }

@@ -11,12 +11,23 @@ export default class Message extends React.Component {
 	}
 	render() {
 			console.log('Message props: ', this.props);
-		return (
-			<div className="right-container">
-				<Heading currentRoomUser={this.props.currentRoomUser} currentRoom={this.props.currentRoom}/>
-				<MessageContentList currentRoomMessage={this.props.currentRoomMessage}/>
-				<ChatBox handleSubmitMessage={this.props.handleSubmitMessage}/>
-			</div>
-			)
+		if (this.props.currentRoom) {
+
+			return (
+				<div className="right-container">
+					<Heading 
+						currentRoomUser={this.props.currentRoomUser} 
+						currentRoom={this.props.currentRoom}
+						username={this.props.username}/>
+					<MessageContentList 
+						currentRoomMessage={this.props.currentRoomMessage}
+						username={this.props.username} />
+					<ChatBox 
+						handleSubmitMessage={this.props.handleSubmitMessage}/>
+				</div>
+				)
+		} else {
+			return null;
+		}
 	}
 }

@@ -24,6 +24,16 @@ button {
 	border-radius: 3px;
 }
 
+.tbl {
+	display: table;
+    width: 100%;
+}
+.tbl-row {
+	display: table-row;
+}
+.tbl-cel {
+	display: table-cell;
+}
 #logIn {
 	position: absolute;
 	top: 50%;
@@ -32,14 +42,14 @@ button {
 	padding: 50px
 }
 
-#logInInput {
+#logIn input[type=text] {
 	padding: 10px 15px;
 	width: 268px;
 	margin: 10px;
 	border: 1px solid #999;
 }
 
-#logInButton {
+#logIn button {
 	color: #fff;
 	text-align: center;
 	padding: 10px 15px;
@@ -96,9 +106,11 @@ ul {
 }
 
 .other_user {
-
+	color: #333;
 }
-
+.username_heading {
+	color: #FF1940;
+}
 .incoming_message {
 	background-color: #fff;
 	padding: 10px 20px;
@@ -106,8 +118,20 @@ ul {
 	border: 1px solid #fff;
 	min-width: 50%;
 	max-width: 400px;
+	clear: both;
 }
 
+.outgoing_message {
+	background-color: #FF1940;
+	padding: 10px 20px;
+	border-radius: 20px;
+	border: 1px solid #FF1940;
+	min-width: 50%;
+	max-width: 400px;
+	float: right;
+	clear: both;
+	color: #fff;
+}
 .heading {
 	height: 100px;	
 	box-shadow: 0 2px 0 #f1f1f1;
@@ -126,10 +150,30 @@ ul {
 }
 .chatbox {
 	bottom: 0;
-	height: 80px;
+	min-height: 80px;
 	right: 0;
 	left: 240px;
 	position: fixed;
 	box-shadow: 2px 0 0 #f1f1f1;
 	background-color: #fff;
+}
+#messagebox {
+	width: 100%;
+}
+#messagebox textarea[type=text]{
+	border: solid 1px #EFF1F2;
+	padding: 10px;
+	width: calc(100% - 140px);
+	font-size: 16px;
+	resize: none;
+}
+#messagebox input[type=submit] {
+	border: none;
+	background: none;
+	color: #4a90e2;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 10px;
+	float: right;
+	width: 100px;
 }
