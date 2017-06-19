@@ -15,7 +15,8 @@ export default class MessageContent extends React.Component {
 			listItems = this.props.currentRoomMessage.map((item) => 
 			<MessageContentListItem 
 						message={item.message}
-						name={item.name} />
+						name={item.name} 
+						username={this.props.username} />
 			);
 		}
 		return (
