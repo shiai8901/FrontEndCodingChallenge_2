@@ -106,9 +106,11 @@ ul {
 }
 
 .other_user {
-
+	color: #333;
 }
-
+.username_heading {
+	color: #FF1940;
+}
 .incoming_message {
 	background-color: #fff;
 	padding: 10px 20px;
