@@ -49,7 +49,7 @@ export default class Chat extends React.Component {
 	}
 
 	render() {
-		console.log('props in Chat', this.props);
+		// console.log('props in Chat', this.props);
 		return (
 			<div>
 				<LeftCol handleChangeRoom={this.handleChangeRoom} 

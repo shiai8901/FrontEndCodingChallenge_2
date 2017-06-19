@@ -13,7 +13,7 @@ export default class Heading extends React.Component {
 		let client = "";
 		if (this.props.currentRoomUser !== undefined) {
 			client = <span className="username_heading">{this.props.username}</span>;
-			users = this.props.currentRoomUser.map((user) => <span className="other_user">, {user}</span>);
+			users = this.props.currentRoomUser.map((user, i) => <span key={i} className="other_user">, {user}</span>);
 		} 
 
 		return (
