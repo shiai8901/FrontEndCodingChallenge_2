@@ -8,7 +8,7 @@ export default class ChatBox extends React.Component {
 	}
 
 	render() {
-		console.log('ChatBox props: ', this.props);
+		// console.log('ChatBox props: ', this.props);
 		return (
 			<div className="chatbox">
 				<div className="container">

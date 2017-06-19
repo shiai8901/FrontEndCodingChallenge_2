@@ -23,7 +23,7 @@ export default class UserInfo extends React.Component {
 	}
 
 	render() {
-		console.log('UserInfo props: ', this.props);
+		// console.log('UserInfo props: ', this.props);
 		return (
 			<div>
 				<p className="userName">{this.props.username}</p>

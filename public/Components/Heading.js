@@ -8,7 +8,7 @@ export default class Heading extends React.Component {
 	}
 
 	render() {
-		console.log('Heading props: ', this.props);
+		// console.log('Heading props: ', this.props);
 		let users = "";
 		let client = "";
 		if (this.props.currentRoomUser !== undefined) {

@@ -9,7 +9,7 @@ export default class MessageContent extends React.Component {
 	}
 
 	render() {
-		console.log('MessageContent props: ', this.props);
+		// console.log('MessageContent props: ', this.props);
 		let listItems = "";
 		if (this.props.currentRoomMessage !== undefined) {
 			listItems = this.props.currentRoomMessage.map((item) => 

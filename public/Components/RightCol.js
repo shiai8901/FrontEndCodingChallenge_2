@@ -10,7 +10,7 @@ export default class Message extends React.Component {
 		super(props); 
 	}
 	render() {
-			console.log('Message props: ', this.props);
+		// console.log('Message props: ', this.props);
 		if (this.props.currentRoom) {
 
 			return (
