@@ -59,6 +59,7 @@ export default class Chat extends React.Component {
 						currentRoom={this.state.currentRoom} 
 						currentRoomMessage={this.state.currentRoomMessage}
 						handleSubmitMessage={this.handleSubmitMessage}
+						username={this.props.username} 
 						className="content" />
 			</div>
 			)
