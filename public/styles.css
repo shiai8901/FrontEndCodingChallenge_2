@@ -15,7 +15,6 @@ body {
 	top:0;
 }
 p {
-	font-weight: 200;
 }
 input {
 	border-radius: 3px;
@@ -23,17 +22,19 @@ input {
 button {
 	border-radius: 3px;
 }
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	padding: 20px;
+}
+.textCenter {
+	text-align: center;
+}
 
-.tbl {
-	display: table;
-    width: 100%;
-}
-.tbl-row {
-	display: table-row;
-}
-.tbl-cel {
-	display: table-cell;
-}
+/* log in table */
 #logIn {
 	position: absolute;
 	top: 50%;
@@ -41,14 +42,12 @@ button {
 	transform: translate(-50%, -50%);
 	padding: 50px
 }
-
 #logIn input[type=text] {
 	padding: 10px 15px;
 	width: 268px;
 	margin: 10px;
 	border: 1px solid #999;
 }
-
 #logIn button {
 	color: #fff;
 	text-align: center;
@@ -59,25 +58,8 @@ button {
 	background-color: #FF1940;
 }
 
-ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-}
 
-.leftColList {
-    height: 100%;
-    padding-top: 40px;
-}
-
-.leftColListItem {
-    font-size: 20px;
-    font-weight: 200;
-    padding: 10px 0;
-}
-.container {
-	padding: 20px;
-}
+/* left col */
 .leftCol {
 	width: 240px;
 	background-color: #FF1940;
@@ -88,16 +70,29 @@ ul {
 	overflow: auto;
 	position: fixed;
 }
+.leftColList {
+    height: 100%;
+    padding-top: 40px;
+}
+.leftColListItem {
+    font-size: 20px;
+    font-weight: 200;
+    padding: 10px 20px;
+}
+.leftColListItem.selected {
+	background-color: #800D20;
+}
 
+ /* user name and online time information in left col */
 .userName {
 	font-size: 28px;
 	font-weight: 600;
 }
-
 .onlineTime {
 	font-size: 14px;
 }
 
+/* right fluid container */
 .right-container {
 	padding-left: 240px;
 	padding: absolute;
@@ -105,11 +100,31 @@ ul {
 	background-color: #EFF1F2;
 }
 
+/* fixed heading for room name and users name */
 .other_user {
 	color: #333;
 }
 .username_heading {
 	color: #FF1940;
+}
+.heading {
+	height: 120px;	
+	box-shadow: 0 2px 2px #cecece;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 240px;
+	background-color: #fff;
+}
+
+
+/* fixed content body for display messages */
+.content {
+	top: 120px;
+	bottom: 100px;
+	width: calc(100% - 240px);
+	position: fixed;
+	overflow: scroll;
 }
 .incoming_message {
 	background-color: #fff;
@@ -120,7 +135,6 @@ ul {
 	max-width: 400px;
 	clear: both;
 }
-
 .outgoing_message {
 	background-color: #FF1940;
 	padding: 10px 20px;
@@ -132,29 +146,15 @@ ul {
 	clear: both;
 	color: #fff;
 }
-.heading {
-	height: 100px;	
-	box-shadow: 0 2px 0 #f1f1f1;
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 240px;
-	background-color: #fff;
-}
-.content {
-	margin-top: 100px;
-	margin-bottom: 80px;
-}
-.textCenter {
-	text-align: center;
-}
+
+/* fixed chat box at the bottom */
 .chatbox {
 	bottom: 0;
 	min-height: 80px;
 	right: 0;
 	left: 240px;
 	position: fixed;
-	box-shadow: 2px 0 0 #f1f1f1;
+	box-shadow: 0 -2px 2px #cecece;
 	background-color: #fff;
 }
 #messagebox {

@@ -8,9 +8,12 @@ export default class ListItem extends React.Component {
 	}
 
 	render() {
-		console.log('ListItem props: ', this.props);
+		// console.log('ListItem props: ', this.props);
+
+		let classes = this.props.currentRoom === this.props.name ? "leftColListItem selected" : "leftColListItem";
+
 		return (
-			<div className="leftColListItem" onClick={() => this.props.handleChangeRoom(this.props.id)}>{this.props.name}
+			<div className={classes} onClick={() => this.props.handleChangeRoom(this.props.id)}>{this.props.name}
 			</div>
 			)
 	}

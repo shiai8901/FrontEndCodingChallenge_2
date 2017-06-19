@@ -10,7 +10,7 @@ export default class LogIn extends React.Component {
 	}
 
 	render () {
-		console.log(this.state);
+		// console.log(this.state);
 		return (
 			<div>
 				<form id="logIn" onSubmit={this.props.submitUsername}>

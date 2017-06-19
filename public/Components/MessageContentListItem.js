@@ -8,7 +8,7 @@ export default class MessageContentListItem extends React.Component {
 	}
 
 	render() {
-		console.log('MessageContentListItem props: ', this.props);
+		// console.log('MessageContentListItem props: ', this.props);
 		if (this.props.username === this.props.name) {
 			return (
 				<div className="MessageContentListItem">

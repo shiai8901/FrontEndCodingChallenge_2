@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from '../styles.css';
-// import { Redirect } from 'react-router-dom';
 import Chat from './Chat';
 import LogIn from './LogIn';
 import axios from 'axios';
@@ -29,7 +28,7 @@ export default class App extends React.Component {
 		axios.get('http://localhost:8080/api/rooms')
 			.then((res) => {
 				this.setState({rooms: res.data});
-				console.log(this.state);
+				// console.log(this.state);
 			})
 			.catch(function(err) {
 				console.log(err);
@@ -45,24 +44,4 @@ export default class App extends React.Component {
 		
 	}
 
-	// render () {
-	// 	console.log(this.state);
-	// 	if (this.state.username === "") {
-	// 		return (
-	// 		<div>
-	// 			<form id="logIn" onSubmit={this.submitUsername}>
-	// 				<input id="logInInput" type="text" name="username" placeholder="Type your username..." /><br></br>
-	// 				<button id="logInButton" type="submit" >Join the DoorDash Chat!</button>
-	// 			</form>
-	// 		</div>	)								
-	// 	} else {
-	// 		debugger;
-	// 		return <Redirect to={{
-	// 			pathname: '/chat',
-	// 			state: { username: this.state.username }
-	// 		}} />
-	// 	}
-		
-		
-	// }
 }
