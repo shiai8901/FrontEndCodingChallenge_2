@@ -37,6 +37,7 @@ export default class Chat extends React.Component {
 		axios.post("http://localhost:8080/api/rooms/" + this.state.currentRoomId + "/messages", data)
 			.then(() => this.updateMessages(this.state.currentRoomId))
 			.catch(err => console.log(err.message));
+		e.target.message.value = "";
 	}
 
 	updateMessages(id) {
@@ -54,7 +55,8 @@ export default class Chat extends React.Component {
 				<LeftCol handleChangeRoom={this.handleChangeRoom} 
 						username={this.props.username} 
 						rooms={this.props.rooms} 
-						onlineSince={this.props.onlineSince}/>
+						onlineSince={this.props.onlineSince}
+						currentRoom={this.state.currentRoom} />
 				<RightCol currentRoomUser={this.state.currentRoomUser} 
 						currentRoom={this.state.currentRoom} 
 						currentRoomMessage={this.state.currentRoomMessage}
