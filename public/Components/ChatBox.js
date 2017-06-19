@@ -13,7 +13,7 @@ export default class ChatBox extends React.Component {
 			<div className="chatbox">
 				<div className="container">
 					<form id="messagebox" onSubmit={this.props.handleSubmitMessage}>
-						<input type="text" name="message" placeholder="Type a message..."/>
+						<textarea type="text" name="message" placeholder="Type a message..."/>
 						<input type="submit" value="Send" />
 
 					</form>
