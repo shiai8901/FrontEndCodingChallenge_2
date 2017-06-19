@@ -82,6 +82,7 @@ ul {
 .leftColListItem.selected {
 	background-color: #800D20;
 }
+
  /* user name and online time information in left col */
 .userName {
 	font-size: 28px;
@@ -107,8 +108,8 @@ ul {
 	color: #FF1940;
 }
 .heading {
-	height: 100px;	
-	box-shadow: 0 2px 0 #f1f1f1;
+	height: 120px;	
+	box-shadow: 0 2px 2px #cecece;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -119,7 +120,7 @@ ul {
 
 /* fixed content body for display messages */
 .content {
-	top: 100px;
+	top: 120px;
 	bottom: 100px;
 	width: calc(100% - 240px);
 	position: fixed;
@@ -153,7 +154,7 @@ ul {
 	right: 0;
 	left: 240px;
 	position: fixed;
-	box-shadow: 2px 0 0 #f1f1f1;
+	box-shadow: 0 -2px 2px #cecece;
 	background-color: #fff;
 }
 #messagebox {
